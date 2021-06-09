@@ -1,4 +1,4 @@
-# CoWin Vaccine Finder
+# :syringe: CoWin Vaccine Finder :syringe:
 
 The intention of this repo is to help you to find a vaccine in India.
 The majority of this script is taken from [Uditvashisht](https://github.com/uditvashisht/cowin-email-alerts) repo. His repo contains the script that will help you to find the vaccine and email it to you but you need have Python installed. 
@@ -14,8 +14,14 @@ After this executes, you will see a list of centers that have availabilty and th
 
 <Snapshot here>
 
-The list is also saved in Vaccine_Availablity.txt file for your reference
-Try to limit the pincodes to 5. 
+This tool creates the following files 
+**Vaccine_Availablity.txt** -> This file only gets created if there are vaccine slots available (See screenshot below)
+**cowin_vaccine_finder.log** -> log file, contains a list of logger messages including a list of vaccine location even if there is no avaialability
+
+Try to limit the pincodes to less than 3. 
+
+# Screenshot 
+![image of vaccine screenshot](https://github.com/clatonhendricks/Cowin_vaccine_finder/blob/main/Vaccine_screenshot.jpg?raw=true)
 
 **Note: You can only run this tool from India as its API are blocked to query are blocked. 
 
