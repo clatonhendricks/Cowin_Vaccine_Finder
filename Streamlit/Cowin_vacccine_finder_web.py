@@ -7,7 +7,6 @@ import os
 from requests.exceptions import HTTPError
 import streamlit as st
 
-# additional options 
 no_of_days = 28   # Options 7,14,21 or 28
 min_age_limit = 18  # Age limit, default 18+
 
@@ -75,17 +74,15 @@ def findVac(pincodes):
                 st.write('Vaccine found!')
                 st.write(final_df)
         else:
-                st.write('No vacines found, please try another pincode(s)')
+                st.write('No vaccines found, please try another pincode(s)')
     except:
         st.error("Unable to connect to the server, if you are not in India then please use VPN to connect to India")
-    # finally:
-    #     st.write('No vacines found, please try another pincode(s)')
 
 # Main Streamlit code
 
 st.title("Cowin Vaccine Finder")
 st.subheader("Please use this along with other resources to find Covid vacccine in India.")
-st.markdown("**NOTE:** You can only use site if you in India or using a VPN to connect to India due to the limitation set by API released by the Indian government. ")
+st.markdown("**NOTE:** You can only use site if you in India or using a VPN to connect to India due to the limitation set by the API released by the Indian government.")
 pincodelist = []
 pincodes = st.text_input("Enter pincodes (e.g. 387001 560043)")
 pincodes = pincodes.split()
