@@ -1,7 +1,7 @@
 # :syringe: CoWin Vaccine Finder :syringe:
 
 The intention of this repo is to help you to find a vaccine in India. 
-The majority of this script is taken from [Uditvashisht](https://github.com/uditvashisht/cowin-email-alerts) repo. His repo contains the script that will help you to find the vaccine and email it to you but you need have Python installed and know how to use it. 
+A portion of this script is taken from [Uditvashisht](https://github.com/uditvashisht/cowin-email-alerts) repo. His repo contains the script that will help you to find the vaccine and email it to you but you need have Python installed and know how to use it. 
 This repo release is self contained and does not have any dependencies. 
 
 **NOTE:** You can only use this tool if you in India or use a VPN to connect to India. This is due to the limitation set by the API released by the Indian government."
