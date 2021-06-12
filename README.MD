@@ -27,7 +27,22 @@ Try to limit the pincodes to less than 3.
 # Screenshot 
 ![image of vaccine screenshot](https://github.com/clatonhendricks/Cowin_vaccine_finder/blob/main/Vaccine_screenshot.jpg?raw=true)
 
-**Note: You can only run this tool from India as its API are blocked to query are blocked. 
+**Note: You can only run this tool from India as its API are blocked to query are blocked.** 
+  
+  
+# What to automatically search for vaccines?
+You can use the "Task Scheduler" in Windows to run this tool every hour or every day. Follow the instructions below
+  
+	1. Click on Search in Windows and search for "Task Scheduler" and click on it
+	2. Right click on "Task Scheduler Libary"
+	3. Click on "Create task"
+	4. Under first tab "General" - Enter any name that you can rememeber e.g. Vaccine Finder
+	5. Go to the next tab "Triggers" and click on New - this is where you can set the schedule to run every hour or every day
+	6. Select "Daily" and check "Repeat task every "1 hour" for a duration of "Indefinitely" and click OK
+	7. Go to the next tab " Actions" and "Browse" to the folder where you can unzipped the **cowin_vaccine_finder.exe** and select it
+	8. Under "Add arguments (optional)" - write the pincodes you want to search for e.g. **--pincodes 387001 560043**
+	9. And that’s it, Click OK and you are done. Now this tool will run every hour and will try to find vaccines for you. 
+
 
 ## License
 © 2021 Claton Hendricks
