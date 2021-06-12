@@ -9,7 +9,7 @@ import argparse
 
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--pincodes', nargs="+", help="Enter single or multiple pincodes seperated by spaces", required=True)
+parser.add_argument('--pincodes', nargs="+", help="Enter single or multiple pincodes seperated by spaces. E.g. cowin_vaccine_finder --pincodes 387001 560043", required=True)
 args = parser.parse_args()
 
 # additional options 
@@ -87,25 +87,28 @@ def main():
     if pincodes is None:
         print("Pincode is missing")
     else:
-        for pincode in pincodes:
-            for date in dates:
-                temp_df = get_availability(pincode, date, min_age_limit)
-                if final_df is not None:
-                    final_df = pd.concat([final_df, temp_df])
-                else:
-                    final_df = deepcopy(temp_df)
-        if (final_df is not None): # or (final_df.shape[0] != 0):
-            #final_df.set_index('date', inplace=True)
-            print(final_df.to_string())
-            print()
-            print('Vacine list is saved to VACCINE_AVAILABILITY.txt')
-            final_df.to_csv(r'Vaccine_Availability.txt', sep=' ', mode='a')
-            logger.info(f'Vaccines have been found and the list is saved to Vaccine_Availability.txt')
-        else:
-            logger.info(final_df)
-            logger.info(f'There is no slot available for pincode(s) {" ".join(pincodes)}')
-            print()
-            print('No vacines found, please try another pincode(s)')
+        try: 
+            for pincode in pincodes:
+                for date in dates:
+                    temp_df = get_availability(pincode, date, min_age_limit)
+                    if final_df is not None:
+                        final_df = pd.concat([final_df, temp_df])
+                    else:
+                        final_df = deepcopy(temp_df)
+            if (final_df is not None): # or (final_df.shape[0] != 0):
+                #final_df.set_index('date', inplace=True)
+                print(final_df.to_string())
+                print()
+                print('Vacine list is saved to VACCINE_AVAILABILITY.txt')
+                final_df.to_csv(r'Vaccine_Availability.txt', sep=' ', mode='a')
+                logger.info(f'Vaccines have been found and the list is saved to Vaccine_Availability.txt')
+            else:
+                logger.info(final_df)
+                logger.info(f'There is no slot available for pincode(s) {" ".join(pincodes)}')
+                print()
+                print('No vacines found, please try another pincode(s)')
+        except:
+            print("Unable to connect to the server, if you are not in India then please use VPN to connect to India")
 
 
 if __name__ == '__main__':
