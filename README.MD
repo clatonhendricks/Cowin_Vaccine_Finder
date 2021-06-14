@@ -30,7 +30,7 @@ Try to limit the pincodes to less than 3.
 **Note: You can only run this tool from India as its API are blocked to query are blocked.** 
   
   
-# What to automatically search for vaccines?
+# Want to automatically search for vaccines?
 You can use the "Task Scheduler" in Windows to run this tool every hour or every day. Follow the instructions below
   
 	1. Click on Search in Windows and search for "Task Scheduler" and click on it
