@@ -27,7 +27,7 @@ Try to limit the pincodes to less than 3.
 # Screenshot 
 ![image of vaccine screenshot](https://github.com/clatonhendricks/Cowin_vaccine_finder/blob/main/Vaccine_screenshot.jpg?raw=true)
 
-**Note: You can only run this tool from India as its API are blocked to query are blocked.** 
+**Note: This tool wont work outside of India unless you use a VPN to connect to the Indian server(this is due to the restrictions put by the Indian govt.) ** 
   
   
 # Want to automatically search for vaccines?
